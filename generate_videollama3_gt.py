@@ -153,7 +153,7 @@ def generate_ground_truths(video_folder, output_single="gt_single.jsonl", output
             gt_single = {
                 "video": [rel_path],
                 "conversations": [
-                    {"from": "human", "value": "<video>\nIs there any abnormal incidence happening? explain in detail"},
+                    {"from": "human", "value": "<video>\n" + PROMPT_FIRST},
                     {"from": "gpt", "value": single_resp}
                 ]
             }
